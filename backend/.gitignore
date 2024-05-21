@@ -1,0 +1,34 @@
+# Virtual environment
+venv/
+venv*/
+.Python
+bin/
+include/
+lib/
+lib64/
+pip-selfcheck.json
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+*.pyc
+
+# Environment variables
+.env
+
+# Flask Environment
+.flaskenv
+
+# Database
+friends.db
+
+# Compiled Python files
+*.pyc
+
+# Dependency directories
+node_modules/
+/dist/
+
+# Cache files
+__pycache__/
