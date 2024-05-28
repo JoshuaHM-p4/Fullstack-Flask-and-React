@@ -10,6 +10,13 @@ def get_friends():
     result = [friend.to_json() for friend in friends]
     return jsonify(result), 200
 
+@app.route('/api/friends/<int:id>', methods=['GET'])
+def get_friend_details(id):
+    friend = Friend.query.get(id)
+    if friend is None:
+        return jsonify({"error": "Friend not found"}), 404
+    return jsonify(friend.to_json()), 200
+
 # Create friends
 @app.route("/api/friends", methods=["POST"])
 def create_friend():
